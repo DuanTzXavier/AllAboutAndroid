@@ -1,6 +1,7 @@
-#Fragment
-###导言
-本文会有大量的代码，请尽量在Android Studio 上看[Demo]()
+# Fragment
+
+### 导言
+本文会有大量的代码，请尽量在Android Studio 上看[Demo](https://github.com/DuanTzXavier/AllAboutAndroid)
 为何要使用Fragment？
 Fragment可以实现Activity的绝大部分功能（见注1），Fragment更加的轻量，并且不需要注册在Manifest中。只需要附着在Activity中就可以了。当Activity被杀死，其下所有的Fragment都被轻易的销毁。
 
@@ -217,4 +218,4 @@ FragmentManager就像Fragment的老大，控制Fragment的生命周期的，之�
     }
 ```
 所以一般情况下，为了迎合~~变态~~优美的设计的理念，我们都会使用`onCreateView()`方法来定义DialogFragment的View
-### [Demo]()
+### [Demo](https://github.com/DuanTzXavier/AllAboutAndroid)

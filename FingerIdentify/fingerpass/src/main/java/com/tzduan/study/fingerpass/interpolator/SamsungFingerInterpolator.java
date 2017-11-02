@@ -50,7 +50,6 @@ public class SamsungFingerInterpolator extends BaseFingerInterpolator {
     private IdentifyListener mIdentifyListener = new IdentifyListener() {
         @Override
         public void onFinished(int eventStatus) {
-            Log.i("SamsungFinger", "eventStatus: " + eventStatus);
             switch (eventStatus) {
                 case SpassFingerprint.STATUS_AUTHENTIFICATION_SUCCESS:
                 case SpassFingerprint.STATUS_AUTHENTIFICATION_PASSWORD_SUCCESS:

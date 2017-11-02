@@ -76,7 +76,7 @@ public class MFingerInterpolator extends BaseFingerInterpolator {
 
     @Override
     public boolean hasEnrolledFingerprints() {
-        return mManager.isHardwareDetected();
+        return mManager.hasEnrolledFingerprints();
     }
 
     @Override

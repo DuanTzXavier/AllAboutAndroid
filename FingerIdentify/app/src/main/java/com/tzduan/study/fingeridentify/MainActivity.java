@@ -8,6 +8,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import com.tzduan.study.fingerpass.FingerIdentify;
@@ -18,11 +20,19 @@ public class MainActivity extends AppCompatActivity implements CancelClick {
 
     FingerIdentify indentify;
     ShowFingerPassMessage showMessage;
+    boolean isRootCouldUse = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FloatingActionButton fab = findViewById(R.id.fab);
+        CheckBox checkBox = findViewById(R.id.cb_root_could_use);
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                isRootCouldUse = isChecked;
+            }
+        });
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements CancelClick {
 
     private void doFingerIdentify(View view){
         indentify = new FingerIdentify(getBaseContext(), callBack);
-        indentify.setSupportRoot(true);
+        indentify.setSupportRoot(isRootCouldUse);
         String snackbarString = "";
         switch (indentify.isSupportFinger()){
             case FingerIdentify.SUPPORT:

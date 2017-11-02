@@ -38,7 +38,7 @@ public class MeizuFingerInterpolator extends BaseFingerInterpolator {
 
     @Override
     public boolean hasEnrolledFingerprints() {
-        return mFM.getIds() == null;
+        return mFM.getIds() != null;
     }
 
     @Override

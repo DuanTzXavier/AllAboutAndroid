@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config=":fingerpass"><source path="/Users/tzduan/WorkSpace/FingerIdentify/fingerpass/build/intermediates/bundles/debug/assets"/></dataSet><dataSet config="main"><source path="/Users/tzduan/WorkSpace/FingerIdentify/app/src/main/assets"/><source path="/Users/tzduan/WorkSpace/FingerIdentify/app/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Users/tzduan/WorkSpace/FingerIdentify/app/src/debug/assets"/></dataSet></merger>

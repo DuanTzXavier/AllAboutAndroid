@@ -1,4 +1,4 @@
-package com.tzduan.study.fragment;
+package com.tzduan.study.fragment.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.tzduan.study.fragment.LifeCycleController;
+import com.tzduan.study.fragment.R;
 import com.tzduan.study.fragment.basefragment.BaseFragment;
 
 /**

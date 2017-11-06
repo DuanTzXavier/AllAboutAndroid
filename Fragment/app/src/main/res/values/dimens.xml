@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer name="animation_time">350</integer>
+    <dimen name="DP_250">250dp</dimen>
+    <dimen name="DP_155">155dp</dimen>
 </resources>

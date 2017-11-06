@@ -5,6 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="220dp">
@@ -50,6 +55,14 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="清除Log"
+            android:textSize="10dp"/>
+
+        <Button
+            android:id="@+id/bt_start_lift_fragment_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="启动升降Fragment Activity"
             android:textSize="10dp"/>
 
     </LinearLayout>

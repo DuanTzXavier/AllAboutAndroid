@@ -1,8 +1,10 @@
 package com.tzduan.study.fragment.utils;
 
+import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.DisplayMetrics;
 import android.widget.Toast;
 
 import com.tzduan.study.fragment.BaseApplication;
@@ -35,6 +37,19 @@ public class Utils {
         transaction.commitAllowingStateLoss();
     }
 
+    public static void addFragmentWithoutAnimation(FragmentManager fragmentManager, int contentID, BaseFragment targetFragment, String targetFragmentTag){
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        Fragment fragment = fragmentManager.findFragmentById(contentID); //先获取当前布局ID上的fragment
+
+        if(fragment != null) { //若fragment不为null，则将此fragment hide
+            transaction.hide(fragment);
+        }
+
+        transaction.add(contentID, targetFragment, targetFragmentTag); //为布局ID为contentID的布局添加targetFragment
+        transaction.addToBackStack(targetFragmentTag); //在BackStack中添加targetFragment tag
+        transaction.commitAllowingStateLoss();
+    }
+
     /**
      * 添加Fragment在布局id为contentID的布局上
      * @param fragmentManager   fragmentManager
@@ -55,5 +70,11 @@ public class Utils {
 
     public static void showToast(String toastString){
         Toast.makeText(BaseApplication.mContext, toastString, Toast.LENGTH_SHORT).show();
+    }
+
+    public static int getSreenHeight(Activity activity){
+        DisplayMetrics dm = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
+        return dm.heightPixels;
     }
 }

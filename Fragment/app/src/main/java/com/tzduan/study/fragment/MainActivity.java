@@ -1,5 +1,6 @@
 package com.tzduan.study.fragment;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -11,9 +12,12 @@ import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.tzduan.study.fragment.activity.LiftFragmentActivity;
 import com.tzduan.study.fragment.dialog.callback.AlertCallBack;
 import com.tzduan.study.fragment.dialog.model.AlertViewData;
 import com.tzduan.study.fragment.dialog.model.DialogViewTypeModel;
+import com.tzduan.study.fragment.fragment.APPV4DialogFragment;
+import com.tzduan.study.fragment.fragment.APPV4Fragment;
 import com.tzduan.study.fragment.utils.SettingDialogFragment;
 import com.tzduan.study.fragment.utils.Utils;
 
@@ -24,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements LifeCycleControll
     private Button btAddFragment;
     private Button btRemoveFragment;
     private Button btClearLog;
+    private Button btStartLiftFragmentActivity;
     private RadioGroup rgFragment;
     private CheckBox cbIsFullScreen;
 
@@ -45,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements LifeCycleControll
         btAddFragment = (Button) findViewById(R.id.bt_add_fragment);
         btRemoveFragment = (Button) findViewById(R.id.bt_remove_fragment);
         btClearLog = (Button) findViewById(R.id.bt_clear_log);
+        btStartLiftFragmentActivity = (Button) findViewById(R.id.bt_start_lift_fragment_activity);
         rgFragment = (RadioGroup) findViewById(R.id.rg_fragment);
         cbIsFullScreen = (CheckBox) findViewById(R.id.cb_is_full_screen);
         setListener();
@@ -91,6 +97,14 @@ public class MainActivity extends AppCompatActivity implements LifeCycleControll
             public void onClick(View view) {
                 tvLogView.setText("");
                 Utils.showToast("日志已清空");
+            }
+        });
+
+        btStartLiftFragmentActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), LiftFragmentActivity.class);
+                startActivity(intent);
             }
         });
 

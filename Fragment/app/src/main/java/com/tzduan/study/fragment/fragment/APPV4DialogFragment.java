@@ -1,4 +1,4 @@
-package com.tzduan.study.fragment;
+package com.tzduan.study.fragment.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 
-import com.tzduan.study.fragment.LifeCycleController;
+import com.tzduan.study.fragment.callback.LifeCycleController;
 
 /**
  * Created by tzduan on 17/10/27.

@@ -1,4 +1,4 @@
-package com.tzduan.study.fragment;
+package com.tzduan.study.fragment.activity;
 
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
@@ -12,13 +12,15 @@ import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.tzduan.study.fragment.activity.LiftFragmentActivity;
+import com.tzduan.study.fragment.R;
+import com.tzduan.study.fragment.callback.LifeCycleController;
+import com.tzduan.study.fragment.callback.SettingDialogCallback;
 import com.tzduan.study.fragment.dialog.callback.AlertCallBack;
 import com.tzduan.study.fragment.dialog.model.AlertViewData;
 import com.tzduan.study.fragment.dialog.model.DialogViewTypeModel;
 import com.tzduan.study.fragment.fragment.APPV4DialogFragment;
 import com.tzduan.study.fragment.fragment.APPV4Fragment;
-import com.tzduan.study.fragment.utils.SettingDialogFragment;
+import com.tzduan.study.fragment.fragment.SettingDialogFragment;
 import com.tzduan.study.fragment.utils.Utils;
 
 import java.util.Random;
@@ -103,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements LifeCycleControll
         btStartLiftFragmentActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), LiftFragmentActivity.class);
+                Intent intent = new Intent(getBaseContext(), PictureInPictureActivity.class);
                 startActivity(intent);
             }
         });
@@ -181,5 +183,15 @@ public class MainActivity extends AppCompatActivity implements LifeCycleControll
     public void setCancelable(boolean cancelable, boolean cancelableOntouch) {
         mDialogCancelable = cancelable;
         mDialogCancelableOntouch = cancelableOntouch;
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }

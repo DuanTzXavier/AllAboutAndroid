@@ -9,24 +9,19 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.tzduan.study.fragment.callback.AddFragmentCallback;
 import com.tzduan.study.fragment.R;
-import com.tzduan.study.fragment.basefragment.BaseFragment;
-
-import java.util.Random;
+import com.tzduan.study.fragment.basefragment.PIPBaseFragment;
 
 /**
- * Created by tzduan on 17/11/6.
+ * Created by tzduan on 17/11/8.
  */
 
-public class LiftFragment extends BaseFragment {
-    private AddFragmentCallback mCallback;
+public class PIPFragment extends PIPBaseFragment {
 
     private int mBackgroudColor = 0;
 
-    public static LiftFragment getInstant(AddFragmentCallback callback, String pageCode, int backgroudColor){
-        LiftFragment fragment = new LiftFragment();
-        fragment.mCallback = callback;
+    public static PIPFragment getInstant(String pageCode, int backgroudColor){
+        PIPFragment fragment = new PIPFragment();
         fragment.mPageCode = pageCode;
         fragment.mBackgroudColor = backgroudColor;
         return fragment;
@@ -50,29 +45,9 @@ public class LiftFragment extends BaseFragment {
             @Override
             public void onClick(View view) {
 
-                if (mCallback != null){
-                    Random random = new Random();
-                    int type = random.nextInt(101) % 3;
-                    int distance = 0;
-                    switch (type){
-                        case 0:
-                            distance = 0;
-                            break;
-                        case 1:
-                            distance = getResources().getDimensionPixelOffset(R.dimen.DP_155);
-                            break;
-                        case 2:
-                            distance = getResources().getDimensionPixelOffset(R.dimen.DP_250);
-                            break;
-                        default:
-                            break;
-                    }
-                    mCallback.addFragment(distance);
-                }
             }
         });
 
         return rootView;
     }
-
 }

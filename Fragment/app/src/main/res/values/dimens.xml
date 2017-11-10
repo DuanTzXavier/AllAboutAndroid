@@ -3,4 +3,9 @@
     <integer name="animation_time">350</integer>
     <dimen name="DP_250">250dp</dimen>
     <dimen name="DP_155">155dp</dimen>
+    <dimen name="DP_16">16dp</dimen>
+    <dimen name="DP_20">20dp</dimen>
+    <dimen name="DP_5">5dp</dimen>
+    <dimen name="DP_160">160dp</dimen>
+    <dimen name="DP_90">90dp</dimen>
 </resources>

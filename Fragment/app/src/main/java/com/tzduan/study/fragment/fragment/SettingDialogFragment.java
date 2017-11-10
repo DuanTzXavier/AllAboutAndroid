@@ -1,4 +1,4 @@
-package com.tzduan.study.fragment.utils;
+package com.tzduan.study.fragment.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
-import com.tzduan.study.fragment.LifeCycleController;
+import com.tzduan.study.fragment.callback.LifeCycleController;
 import com.tzduan.study.fragment.R;
-import com.tzduan.study.fragment.SettingDialogCallback;
+import com.tzduan.study.fragment.callback.SettingDialogCallback;
 import com.tzduan.study.fragment.basefragment.BaseFragment;
 
 /**

@@ -1,4 +1,4 @@
-package com.tzduan.study.fragment;
+package com.tzduan.study.fragment.callback;
 
 /**
  * Created by tzduan on 17/10/30.

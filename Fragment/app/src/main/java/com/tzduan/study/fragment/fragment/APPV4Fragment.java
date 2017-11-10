@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.tzduan.study.fragment.LifeCycleController;
+import com.tzduan.study.fragment.callback.LifeCycleController;
 import com.tzduan.study.fragment.R;
 import com.tzduan.study.fragment.basefragment.BaseFragment;
 
